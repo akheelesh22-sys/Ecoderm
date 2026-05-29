@@ -5,7 +5,7 @@ const products = [
     category: "Wellness shot",
     size: "100 ml",
     price: 180,
-    image: "assets/immunity-shot.jpg",
+    image: "immunity-shot.jpg",
     description: "Ginger and lemon wellness blend for a quick daily boost.",
   },
   {
@@ -14,7 +14,7 @@ const products = [
     category: "Beauty drink",
     size: "60 ml",
     price: 220,
-    image: "assets/glow-shot.jpg",
+    image: "glow-shot.jpg",
     description: "Turmeric, vitamin C, amla, ginger, and lemon for inner glow.",
   },
   {
@@ -23,7 +23,7 @@ const products = [
     category: "Daily care",
     size: "15 g",
     price: 260,
-    image: "assets/lip-balm.jpg",
+    image: "lip-balm.jpg",
     description: "Nourishing balm designed to protect and soften lips naturally.",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     category: "Exfoliator",
     size: "100 g",
     price: 420,
-    image: "assets/face-scrub.jpg",
+    image: "face-scrub.jpg",
     description: "Walnut shell, jojoba beads, aloe vera, and green tea extract.",
   },
   {
@@ -41,7 +41,7 @@ const products = [
     category: "Hydrator",
     size: "300 g",
     price: 520,
-    image: "assets/aloe-vera-gel.jpg",
+    image: "aloe-vera-gel.jpg",
     description: "Cooling aloe gel for soothing hydration and refreshed skin.",
   },
   {
@@ -50,7 +50,7 @@ const products = [
     category: "Body care",
     size: "50 g",
     price: 390,
-    image: "assets/armpit-odor-cream.jpg",
+    image: "armpit-odor-cream.jpg",
     description: "Aluminum-free odor care with aloe vera, chamomile, and tea tree oil.",
   },
   {
@@ -59,7 +59,7 @@ const products = [
     category: "Treatment",
     size: "100 g",
     price: 480,
-    image: "assets/face-mask.jpg",
+    image: "face-mask.jpg",
     description: "Kaolin clay, matcha, aloe vera, and niacinamide for clean pores.",
   },
   {
@@ -68,7 +68,7 @@ const products = [
     category: "Brightening",
     size: "50 g",
     price: 360,
-    image: "assets/tan-remover-scrub.jpg",
+    image: "tan-remover-scrub.jpg",
     description: "Exfoliating scrub with licorice extract, aloe vera, and vitamin E.",
   },
 ];
