@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ecoderm natural skincare and wellness products with cart and checkout experience."
+    />
+    <title>Ecoderm | Kindness to Earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      Free local delivery on orders over Rs 1,500. Same-day pickup available.
+    </div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Ecoderm home">
+        <img src="assets/ecoderm-logo.jpg" alt="Ecoderm logo" />
+        <span>Ecoderm</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a>
+        <a href="#ritual">Rituals</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-button" type="button" data-cart-open aria-label="Open cart">
+        <span>Cart</span>
+        <strong data-cart-count>0</strong>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Natural skincare and daily wellness</p>
+          <h1>Ecoderm</h1>
+          <p>
+            Plant-powered essentials crafted for clean skin, steady glow, and gentle daily care.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#shop">Shop products</a>
+            <button class="secondary-link" type="button" data-cart-open>Proceed to cart</button>
+          </div>
+        </div>
+        <div class="hero-media" aria-label="Ecoderm featured products">
+          <img class="hero-product hero-product-main" src="assets/glow-shot.jpg" alt="Ecoderm Glow Shot" />
+          <img class="hero-product hero-product-side" src="assets/aloe-vera-gel.jpg" alt="Ecoderm Aloe Vera Gel" />
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Ecoderm store benefits">
+        <div>
+          <strong>Clean formulas</strong>
+          <span>Paraben-conscious, nature-led care</span>
+        </div>
+        <div>
+          <strong>Secure checkout</strong>
+          <span>Cart summary before order request</span>
+        </div>
+        <div>
+          <strong>Fresh batches</strong>
+          <span>Small-run skincare and wellness</span>
+        </div>
+      </section>
+
+      <section class="section intro" id="about">
+        <div>
+          <p class="eyebrow">Kindness to earth</p>
+          <h2>Skincare that feels considered from jar to ritual.</h2>
+        </div>
+        <p>
+          Ecoderm blends botanical ingredients with practical everyday routines. From aloe hydration
+          to exfoliating scrubs and glow shots, every product is presented clearly so customers can
+          choose, add to cart, and prepare an order without friction.
+        </p>
+      </section>
+
+      <section class="section" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Shop Ecoderm</p>
+            <h2>Featured products</h2>
+          </div>
+          <button class="outline-button" type="button" data-cart-open>View cart</button>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section ritual-section" id="ritual">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Daily ritual</p>
+            <h2>Build a complete care routine.</h2>
+          </div>
+        </div>
+        <div class="ritual-grid">
+          <article>
+            <span>1</span>
+            <h3>Cleanse and renew</h3>
+            <p>Use Face Scrub or Face Mask two to three times weekly for a smooth, refreshed base.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Soothe and hydrate</h3>
+            <p>Layer Aloe Vera Gel after cleansing for light hydration and a calm finish.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Protect details</h3>
+            <p>Finish with Lip Balm and Armpit Odor Cream for targeted daily comfort.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="split-image">
+          <img src="assets/face-mask.jpg" alt="Ecoderm Face Mask" />
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Why customers choose us</p>
+          <h2>Clear benefits, visible products, simple ordering.</h2>
+          <ul class="benefit-list">
+            <li>Natural-ingredient positioning for a clean beauty audience.</li>
+            <li>Product cards include sizes, category, benefits, and pricing.</li>
+            <li>Cart drawer supports quantity updates, removal, totals, and checkout.</li>
+            <li>Contact and order request forms are ready for customer enquiries.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section reviews">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reviews</p>
+            <h2>Customer notes</h2>
+          </div>
+        </div>
+        <div class="review-grid">
+          <figure>
+            <blockquote>
+              "The Aloe Vera Gel is light, cooling, and perfect after a long day in the sun."
+            </blockquote>
+            <figcaption>Priya M.</figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              "The Face Scrub feels polished without being harsh. The jar looks beautiful too."
+            </blockquote>
+            <figcaption>Aisha R.</figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              "Glow Shot is my quick morning boost. The checkout process makes ordering simple."
+            </blockquote>
+            <figcaption>Leanne D.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div>
+          <p class="eyebrow">FAQ</p>
+          <h2>Ordering details</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How do customers place an order?</summary>
+            <p>Add products to the cart, review quantities, then use Proceed to checkout to prepare an order request.</p>
+          </details>
+          <details>
+            <summary>Can products be collected locally?</summary>
+            <p>Yes. Pickup and local delivery options can be confirmed after the order request is submitted.</p>
+          </details>
+          <details>
+            <summary>Are the products suitable for all skin types?</summary>
+            <p>Several products are labeled for all skin types. Customers with sensitivities should patch test first.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-card">
+          <p class="eyebrow">Contact</p>
+          <h2>Talk to Ecoderm</h2>
+          <p>For wholesale, skincare advice, or custom order support, send a message.</p>
+          <div class="contact-links">
+            <a href="mailto:hello@ecoderm.example">hello@ecoderm.example</a>
+            <a href="tel:+23055550000">+230 5555 0000</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+          </label>
+          <button class="primary-button" type="submit">Send message</button>
+          <p class="form-status" data-contact-status role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Ecoderm</strong>
+        <p>Kindness to earth. Natural skincare for thoughtful routines.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" data-cart-overlay hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Your cart</p>
+          <h2>Order summary</h2>
+        </div>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart">x</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-empty" data-cart-empty>
+        <strong>Your cart is empty.</strong>
+        <span>Add Ecoderm products to begin your order.</span>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-row">
+          <span>Subtotal</span>
+          <strong data-cart-subtotal>Rs 0</strong>
+        </div>
+        <div class="cart-row">
+          <span>Estimated delivery</span>
+          <strong data-cart-delivery>Rs 0</strong>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong data-cart-total>Rs 0</strong>
+        </div>
+        <button class="primary-button full" type="button" data-checkout>Proceed to checkout</button>
+        <button class="outline-button full" type="button" data-cart-close>Continue shopping</button>
+      </div>
+    </aside>
+
+    <dialog class="checkout-dialog" data-checkout-dialog>
+      <form method="dialog" class="checkout-form" id="checkoutForm">
+        <div class="cart-header">
+          <div>
+            <p class="eyebrow">Checkout</p>
+            <h2>Complete order request</h2>
+          </div>
+          <button class="icon-button" type="button" data-checkout-close aria-label="Close checkout">x</button>
+        </div>
+        <div class="checkout-summary" data-checkout-summary></div>
+        <div class="checkout-grid">
+          <label>
+            Full name
+            <input type="text" name="fullName" required />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Delivery option
+            <select name="delivery">
+              <option>Local delivery</option>
+              <option>Pickup</option>
+            </select>
+          </label>
+          <label class="wide">
+            Address or pickup note
+            <textarea name="address" rows="3" required></textarea>
+          </label>
+        </div>
+        <button class="primary-button full" type="button" data-place-order>Place order request</button>
+        <p class="form-status" data-order-status role="status"></p>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
