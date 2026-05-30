@@ -265,3 +265,77 @@ document.addEventListener("keydown", (event) => {
 
 renderProducts();
 renderCart();
+const startScanButton = document.querySelector("#startScan");
+const skinCamera = document.querySelector("#skinCamera");
+const skinScanForm = document.querySelector("#skinScanForm");
+const scanResult = document.querySelector("#scanResult");
+
+if (startScanButton && skinCamera) {
+  startScanButton.addEventListener("click", async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: "user" },
+        audio: false,
+      });
+
+      skinCamera.srcObject = stream;
+      startScanButton.textContent = "Camera Started";
+    } catch (error) {
+      scanResult.innerHTML = `
+        <strong>Camera access blocked.</strong>
+        <p>Please allow camera permission or use the questions below.</p>
+      `;
+    }
+  });
+}
+
+if (skinScanForm) {
+  skinScanForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const skinType = document.querySelector("#skinType").value;
+    const concern = document.querySelector("#skinConcern").value;
+    const sensitivity = document.querySelector("#sensitivity").value;
+
+    let recommendation = "";
+
+    if (sensitivity === "high") {
+      recommendation = `
+        <h3>Recommended Product: Aloe Vera Gel</h3>
+        <p>Reason: Your skin seems sensitive, so start with a gentle soothing product.</p>
+      `;
+    } else if (skinType === "dry" || concern === "dryness") {
+      recommendation = `
+        <h3>Recommended Products: Aloe Vera Gel + Lip Balm</h3>
+        <p>Reason: These products help with hydration and dryness.</p>
+      `;
+    } else if (skinType === "oily" && concern === "pores") {
+      recommendation = `
+        <h3>Recommended Product: Face Mask</h3>
+        <p>Reason: Face Mask helps with clogged pores and oily skin care.</p>
+      `;
+    } else if (concern === "acne") {
+      recommendation = `
+        <h3>Recommended Products: Face Mask + Aloe Vera Gel</h3>
+        <p>Reason: Use Face Mask for clogged pores and Aloe Vera Gel to soothe the skin. Avoid scrubbing active pimples.</p>
+      `;
+    } else if (concern === "dullness") {
+      recommendation = `
+        <h3>Recommended Products: Glow Shot + Face Scrub</h3>
+        <p>Reason: Glow Shot supports glow from within, while Face Scrub helps remove dull surface buildup.</p>
+      `;
+    } else if (concern === "tan") {
+      recommendation = `
+        <h3>Recommended Product: Tan Remover Scrub</h3>
+        <p>Reason: This is the best match for tan or uneven skin tone.</p>
+      `;
+    } else {
+      recommendation = `
+        <h3>Recommended Product: Aloe Vera Gel</h3>
+        <p>Reason: This is the safest general recommendation for most skin routines.</p>
+      `;
+    }
+
+    scanResult.innerHTML = recommendation;
+  });
+}
