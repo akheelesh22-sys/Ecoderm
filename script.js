@@ -265,77 +265,57 @@ document.addEventListener("keydown", (event) => {
 
 renderProducts();
 renderCart();
-const startScanButton = document.querySelector("#startScan");
-const skinCamera = document.querySelector("#skinCamera");
-const skinScanForm = document.querySelector("#skinScanForm");
-const scanResult = document.querySelector("#scanResult");
+/* SKIN SCAN RECOMMENDATION */
 
-if (startScanButton && skinCamera) {
-  startScanButton.addEventListener("click", async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "user" },
-        audio: false,
-      });
+const skinScanForm = document.getElementById("skinScanForm");
+const scanResult = document.getElementById("scanResult");
 
-      skinCamera.srcObject = stream;
-      startScanButton.textContent = "Camera Started";
-    } catch (error) {
-      scanResult.innerHTML = `
-        <strong>Camera access blocked.</strong>
-        <p>Please allow camera permission or use the questions below.</p>
-      `;
-    }
-  });
-}
-
-if (skinScanForm) {
-  skinScanForm.addEventListener("submit", (event) => {
+if (skinScanForm && scanResult) {
+  skinScanForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const skinType = document.querySelector("#skinType").value;
-    const concern = document.querySelector("#skinConcern").value;
-    const sensitivity = document.querySelector("#sensitivity").value;
+    const skinType = document.getElementById("skinType").value;
+    const skinConcern = document.getElementById("skinConcern").value;
+    const sensitivity = document.getElementById("sensitivity").value;
 
-    let recommendation = "";
-
-    if (sensitivity === "high") {
-      recommendation = `
-        <h3>Recommended Product: Aloe Vera Gel</h3>
-        <p>Reason: Your skin seems sensitive, so start with a gentle soothing product.</p>
+    if (!skinType || !skinConcern || !sensitivity) {
+      scanResult.innerHTML = `
+        <h3>Please complete all questions.</h3>
+        <p>Choose your skin type, concern, and sensitivity level first.</p>
       `;
-    } else if (skinType === "dry" || concern === "dryness") {
-      recommendation = `
-        <h3>Recommended Products: Aloe Vera Gel + Lip Balm</h3>
-        <p>Reason: These products help with hydration and dryness.</p>
-      `;
-    } else if (skinType === "oily" && concern === "pores") {
-      recommendation = `
-        <h3>Recommended Product: Face Mask</h3>
-        <p>Reason: Face Mask helps with clogged pores and oily skin care.</p>
-      `;
-    } else if (concern === "acne") {
-      recommendation = `
-        <h3>Recommended Products: Face Mask + Aloe Vera Gel</h3>
-        <p>Reason: Use Face Mask for clogged pores and Aloe Vera Gel to soothe the skin. Avoid scrubbing active pimples.</p>
-      `;
-    } else if (concern === "dullness") {
-      recommendation = `
-        <h3>Recommended Products: Glow Shot + Face Scrub</h3>
-        <p>Reason: Glow Shot supports glow from within, while Face Scrub helps remove dull surface buildup.</p>
-      `;
-    } else if (concern === "tan") {
-      recommendation = `
-        <h3>Recommended Product: Tan Remover Scrub</h3>
-        <p>Reason: This is the best match for tan or uneven skin tone.</p>
-      `;
-    } else {
-      recommendation = `
-        <h3>Recommended Product: Aloe Vera Gel</h3>
-        <p>Reason: This is the safest general recommendation for most skin routines.</p>
-      `;
+      return;
     }
 
-    scanResult.innerHTML = recommendation;
+    let title = "";
+    let reason = "";
+
+    if (sensitivity === "high") {
+      title = "Aloe Vera Gel";
+      reason = "Your skin may be sensitive, so the safest recommendation is a gentle soothing product.";
+    } else if (skinConcern === "dryness" || skinType === "dry") {
+      title = "Aloe Vera Gel + Lip Balm";
+      reason = "These products are best suited for hydration, dryness, and daily protection.";
+    } else if (skinConcern === "acne") {
+      title = "Face Mask + Aloe Vera Gel";
+      reason = "Face Mask helps with pores and buildup, while Aloe Vera Gel helps soothe the skin. Avoid scrubbing active pimples.";
+    } else if (skinConcern === "pores" || skinType === "oily") {
+      title = "Face Mask";
+      reason = "This is better suited for oily skin and clogged pores.";
+    } else if (skinConcern === "dullness") {
+      title = "Glow Shot + Face Scrub";
+      reason = "Glow Shot supports glow, while Face Scrub helps remove dull surface buildup.";
+    } else if (skinConcern === "tan") {
+      title = "Tan Remover Scrub";
+      reason = "This is the best match for tan or uneven skin tone.";
+    } else {
+      title = "Aloe Vera Gel";
+      reason = "This is the safest general recommendation for most skin routines.";
+    }
+
+    scanResult.innerHTML = `
+      <h3>Recommended Product: ${title}</h3>
+      <p>${reason}</p>
+      <p><strong>Note:</strong> This is a product suggestion only, not a medical diagnosis.</p>
+    `;
   });
 }
