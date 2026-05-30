@@ -170,6 +170,69 @@
 
       <section class="section faq-section">
         <div>
+          <section class="section skin-scan-section" id="skin-scan">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Skin Scan</p>
+      <h2>Find your suggested Ecoderm product</h2>
+    </div>
+  </div>
+
+  <div class="skin-scan-grid">
+    <div class="scan-card">
+      <video id="skinCamera" autoplay playsinline></video>
+
+      <button class="primary-button" type="button" id="startScan">
+        Start Face Scan
+      </button>
+
+      <p class="scan-note">
+        This tool gives product suggestions only. It is not medical advice or a skin diagnosis.
+      </p>
+    </div>
+
+    <form class="scan-form" id="skinScanForm">
+      <label>
+        What is your skin type?
+        <select id="skinType" required>
+          <option value="">Choose one</option>
+          <option value="oily">Oily</option>
+          <option value="dry">Dry</option>
+          <option value="sensitive">Sensitive</option>
+          <option value="normal">Normal</option>
+        </select>
+      </label>
+
+      <label>
+        Main skin concern
+        <select id="skinConcern" required>
+          <option value="">Choose one</option>
+          <option value="acne">Acne / pimples</option>
+          <option value="dryness">Dryness</option>
+          <option value="dullness">Dull skin</option>
+          <option value="tan">Tan / uneven tone</option>
+          <option value="pores">Clogged pores</option>
+        </select>
+      </label>
+
+      <label>
+        How sensitive is your skin?
+        <select id="sensitivity" required>
+          <option value="">Choose one</option>
+          <option value="low">Not sensitive</option>
+          <option value="medium">Sometimes sensitive</option>
+          <option value="high">Very sensitive</option>
+        </select>
+      </label>
+
+      <button class="primary-button" type="submit">
+        Get Recommendation
+      </button>
+
+      <div class="scan-result" id="scanResult"></div>
+    </form>
+  </div>
+</section>
           <p class="eyebrow">FAQ</p>
           <h2>Ordering details</h2>
         </div>
