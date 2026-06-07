@@ -1,0 +1,42 @@
+{
+  "name": "Ecoderm Natural Skincare",
+  "short_name": "Ecoderm",
+  "description": "Ecoderm natural skincare, wellness products, face scan guidance, cart, checkout, delivery, and payment support.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FAF8F4",
+  "theme_color": "#A8BBA3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "app-icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "app-icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop",
+      "short_name": "Shop",
+      "url": "./shop.html"
+    },
+    {
+      "name": "Face Scan",
+      "short_name": "Scan",
+      "url": "./face-scan.html"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "url": "./contact.html"
+    }
+  ]
+}

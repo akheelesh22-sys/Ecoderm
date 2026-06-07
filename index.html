@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ecoderm natural skincare and wellness products in Mauritius." />
+    <meta name="theme-color" content="#A8BBA3" />
+    <title>Ecoderm | Natural Skincare Mauritius</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="app-icon-192.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <button class="menu-toggle" type="button" data-menu-open aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="index.html" aria-label="Ecoderm home">
+        <img src="ecoderm-logo.jpg" alt="Ecoderm logo" />
+        <span>Ecoderm</span>
+      </a>
+      <button class="cart-icon" type="button" data-cart-open aria-label="Open cart">
+        Cart <strong data-cart-count>0</strong>
+      </button>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="payment.html">Payment</a>
+        <a href="face-scan.html">Face Scan</a>
+      </nav>
+    </header>
+
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <aside class="mobile-menu" data-mobile-menu aria-hidden="true">
+      <div class="mobile-menu-header">
+        <strong>Menu</strong>
+        <button class="icon-button" type="button" data-menu-close aria-label="Close menu">x</button>
+      </div>
+      <nav>
+        <a href="index.html" data-menu-link aria-current="page">Home</a>
+        <a href="shop.html" data-menu-link>Shop</a>
+        <a href="gallery.html" data-menu-link>Gallery</a>
+        <a href="team.html" data-menu-link>Team</a>
+        <a href="contact.html" data-menu-link>Contact</a>
+        <a href="delivery.html" data-menu-link>Delivery</a>
+        <a href="payment.html" data-menu-link>Payment</a>
+        <a href="face-scan.html" data-menu-link>Face Scan</a>
+        <button type="button" data-cart-open data-menu-link>Cart</button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="hero section page-home-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Ecoderm Mauritius</p>
+          <h1>Natural Skincare, Kindness to Earth</h1>
+          <p>Clean botanical care for daily glow, hydration, exfoliation, wellness, and body confidence.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="shop.html">Shop Now</a>
+            <a class="secondary-button" href="face-scan.html">Start Face Scan</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img class="hero-main-image" src="face-mask.jpg" alt="Ecoderm Face Mask product" />
+          <div class="hero-product-stack">
+            <img src="glow-shot.jpg" alt="Ecoderm Glow Shot" />
+            <img src="aloe-vera-gel.jpg" alt="Ecoderm Aloe Vera Gel" />
+          </div>
+        </div>
+      </section>
+
+      <section class="benefit-strip" aria-label="Store benefits">
+        <article><strong>Natural-led care</strong><span>Green beauty essentials for simple routines.</span></article>
+        <article><strong>Secure order flow</strong><span>Cart, checkout, delivery, and payment clarity.</span></article>
+        <article><strong>Mauritius support</strong><span>WhatsApp help for orders and product guidance.</span></article>
+      </section>
+
+      <section class="section home-preview-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Explore Ecoderm</p>
+            <h2>A complete skincare shopping experience.</h2>
+          </div>
+        </div>
+        <div class="preview-grid">
+          <a href="shop.html"><span>Shop</span><strong>Browse products and add to cart.</strong></a>
+          <a href="gallery.html"><span>Gallery</span><strong>See product rituals and lifestyle images.</strong></a>
+          <a href="face-scan.html"><span>Face Scan</span><strong>Get a guided product suggestion.</strong></a>
+          <a href="payment.html"><span>Payment</span><strong>Review cash, Juice, and bank transfer options.</strong></a>
+        </div>
+      </section>
+    </main>
+
+    <div class="cart-overlay" data-cart-overlay hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Your cart</p>
+          <h2>Order summary</h2>
+        </div>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart">x</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-empty" data-cart-empty>
+        <strong>Your cart is empty.</strong>
+        <span>Add Ecoderm products to begin your order.</span>
+      </div>
+      <div class="cart-footer">
+        <div><span>Subtotal</span><strong data-cart-subtotal>Rs 0</strong></div>
+        <div><span>Delivery fee</span><strong data-cart-delivery>Rs 0</strong></div>
+        <div class="cart-total"><span>Total</span><strong data-cart-total>Rs 0</strong></div>
+        <button class="primary-button full" type="button" data-checkout>Proceed to Checkout</button>
+        <button class="outline-button full" type="button" data-cart-close>Continue Shopping</button>
+      </div>
+    </aside>
+
+    <dialog class="checkout-dialog" data-checkout-dialog>
+      <form class="checkout-form" method="dialog" data-checkout-form>
+        <div class="cart-header">
+          <div>
+            <p class="eyebrow">Checkout</p>
+            <h2>Complete order</h2>
+          </div>
+          <button class="icon-button" type="button" data-checkout-close aria-label="Close checkout">x</button>
+        </div>
+        <div class="checkout-summary" data-checkout-summary></div>
+        <div class="checkout-grid">
+          <label>Full name <input name="name" required /></label>
+          <label>Phone <input name="phone" type="tel" required /></label>
+          <label>Email <input name="email" type="email" required /></label>
+          <label>Delivery method
+            <select name="delivery" required>
+              <option value="">Choose one</option>
+              <option>Delivery</option>
+              <option>Pickup</option>
+            </select>
+          </label>
+          <label class="wide">Address or pickup note <textarea name="address" rows="3" required></textarea></label>
+          <label class="wide">Payment method
+            <select name="payment" required>
+              <option value="">Choose one</option>
+              <option>Cash</option>
+              <option>Juice</option>
+              <option>Bank Transfer</option>
+            </select>
+          </label>
+        </div>
+        <button class="primary-button full" type="button" data-place-order>Place Order Request</button>
+        <p class="form-status" data-order-status></p>
+      </form>
+    </dialog>
+
+    <button class="install-app-button" type="button" data-install-app>Install App</button>
+
+    <section class="ai-assistant" data-ai-assistant>
+      <button class="ai-toggle" type="button" data-ai-open aria-label="Open Ecoderm AI assistant">AI</button>
+      <div class="ai-panel" data-ai-panel hidden>
+        <div class="ai-header">
+          <div>
+            <strong>Ecoderm Assistant</strong>
+            <span>Skin product guide</span>
+          </div>
+          <button class="ai-minimize" type="button" data-ai-close aria-label="Minimize assistant">-</button>
+        </div>
+        <div class="ai-messages" data-ai-messages>
+          <p class="ai-message ai-message-bot">Hi. Tell me your skin type or concern, and I will suggest an Ecoderm product.</p>
+        </div>
+        <form class="ai-form" data-ai-form>
+          <input data-ai-input type="text" placeholder="Dry skin, oily pores, dull skin..." aria-label="Ask Ecoderm AI assistant" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="cookie-banner" data-cookie-banner hidden>
+      <p>We use cookies to improve your shopping experience.</p>
+      <div>
+        <button type="button" data-cookie-accept>Accept</button>
+        <button type="button" data-cookie-decline>Decline</button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <strong>Ecoderm</strong>
+      <span>Kindness to Earth. Natural skincare for thoughtful routines.</span>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/23058454925">WhatsApp</a>
+    <script src="script.js"></script>
+  </body>
+</html>
